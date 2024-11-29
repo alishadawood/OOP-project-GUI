@@ -1,0 +1,236 @@
+
+package airlinerproject;
+
+import java.awt.Color;
+import javax.swing.*;
+import javax.swing.JPasswordField;
+import java.awt.*;
+
+
+import javax.swing.JOptionPane;
+
+public class login1 extends javax.swing.JFrame {
+   
+    
+    
+    public login1() {
+        initComponents();
+       this.getContentPane().setBackground(Color.blue);
+       himden();
+       
+       
+    }
+
+private void himden()
+{
+  //Name.setVisible(false);
+  //Password.setVisible(false);
+}
+private boolean valid() {
+   
+    String name = Name.getText(); 
+    String pass = new String(Password.getPassword());  
+
+   
+    if (name.isEmpty() || pass.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter both username and password!", "Error", JOptionPane.ERROR_MESSAGE);
+        return false;  
+    }
+
+ 
+    String validUsername = "admin";
+    String validPassword = "12345";
+
+  
+    if (name.equals(validUsername) && pass.equals(validPassword)) {
+        JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
+        return true;  
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid username or password!", "Error", JOptionPane.ERROR_MESSAGE);
+        return false;  // Return false if the credentials are invalid
+    }
+}
+
+            
+            
+            
+            
+            
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        showpassword = new javax.swing.JCheckBox();
+        userlogin = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Name = new javax.swing.JTextPane();
+        Password = new javax.swing.JPasswordField();
+        Cancel1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 102));
+        setSize(new java.awt.Dimension(500, 350));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("UserName");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Password");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+
+        showpassword.setBackground(new java.awt.Color(0, 102, 153));
+        showpassword.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        showpassword.setForeground(new java.awt.Color(255, 255, 255));
+        showpassword.setText("Show Password");
+        showpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showpasswordActionPerformed(evt);
+            }
+        });
+        jPanel1.add(showpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, 20));
+
+        userlogin.setBackground(new java.awt.Color(0, 0, 153));
+        userlogin.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        userlogin.setText("Login");
+        userlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userloginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(userlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 80, -1));
+
+        jScrollPane2.setViewportView(Name);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 180, 30));
+
+        Password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 180, 30));
+
+        Cancel1.setBackground(new java.awt.Color(153, 0, 0));
+        Cancel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Cancel1.setText("Logout");
+        Cancel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cancel1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Cancel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 80, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airlinerproject/loginpagepicture.jpeg"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 260));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 320, 260));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Login page");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airlinerproject/loginpagepicture.jpeg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 460));
+
+        pack();
+    }// </editor-fold>                        
+
+    private void userloginActionPerformed(java.awt.event.ActionEvent evt) {                                          
+     
+                                       
+    String username = Name.getText();
+    String password = new String(Password.getText());
+
+    if (username.isEmpty() || password.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter both username and password!", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    String validUsername = "admin";
+    String validPassword = "12345";
+
+ 
+    if (username.equals(validUsername) && password.equals(validPassword)) {
+        JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
+      
+        this.setVisible(false); 
+        Main2 main = new Main2(); 
+        main.setVisible(true);
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid username or password!", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+
+
+    }                                         
+
+    private void showpasswordActionPerformed(java.awt.event.ActionEvent evt) {                                             
+   if (showpassword.isSelected()) {
+       
+        Password.setEchoChar((char) 0);
+    } else {
+        
+        Password.setEchoChar('*');
+    }                                            
+   
+    }                                            
+
+    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+    }                                        
+
+    private void Cancel1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        int x = JOptionPane.showConfirmDialog(null, 
+                "Are you sure you want to logout?", 
+                "Exit Confirmation", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE);
+        
+     
+        if (x == JOptionPane.YES_OPTION) {
+            System.out.println("Exiting the program...");
+            System.exit(0); 
+        } else {
+            System.out.println("Cancel logout"
+                    + ". Continue working.");
+        }
+    }                                       
+
+    public static void main(String args[]) {
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new login1().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton Cancel1;
+    private javax.swing.JTextPane Name;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JCheckBox showpassword;
+    private javax.swing.JButton userlogin;
+    // End of variables declaration                   
+}
